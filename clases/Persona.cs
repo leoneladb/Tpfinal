@@ -16,8 +16,8 @@ public class Persona
 
 	public int Dni
 	{
-		get { return edad; }
-		set { edad = value; }
+		get { return dni; }
+		set { dni = value; }
 	}
 
 	public string Nombre
@@ -30,7 +30,6 @@ public class Persona
 		get { return edad; }
 		set { edad = value; }
 	}
-
 
 
 }

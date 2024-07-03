@@ -3,17 +3,19 @@ using System.Collections;
 public class Deporte
 {
 	private string nombreDeporte;
-	private DateTime categoria;
+	private int categoria;
 	private Entrenador entrenador;
 	private int cupo;
 	private int cantidadInscriptos;
 	private double costo;
 	private string horario;
 	private int descuento;
-	
+	private int id;
 
-	public Deporte(string nombreDeporte, DateTime categoria, Entrenador entrenador, int cupo, int cantidadInscriptos, double costo, string horario)
+
+	public Deporte(string nombreDeporte, int categoria, Entrenador entrenador, int cupo, int cantidadInscriptos, double costo, string horario, int descuento, int id)
 	{
+		this.descuento = descuento;
 		this.nombreDeporte = nombreDeporte;
 		this.categoria = categoria;
 		this.entrenador = entrenador;
@@ -21,6 +23,25 @@ public class Deporte
 		this.cantidadInscriptos = cantidadInscriptos;
 		this.costo = costo;
 		this.horario = horario;
+		this.id = id;
+	}
+
+	public void AgregarEntrenador(Entrenador entreador)
+	{
+		Entrenador = entreador;
+	}
+
+
+	public int Id
+	{
+		get { return id; }
+		set { id = value; }
+
+	}
+	public int Descuento
+	{
+		get { return descuento; }
+		set { descuento = value; }
 	}
 
 	public string NombreDeporte
@@ -28,7 +49,7 @@ public class Deporte
 		get { return nombreDeporte; }
 		set { nombreDeporte = value; }
 	}
-	public DateTime Categoria
+	public int Categoria
 	{
 		get { return categoria; }
 		set { categoria = value; }
@@ -54,12 +75,10 @@ public class Deporte
 		get { return horario; }
 		set { horario = value; }
 	}
-	
+
 	public double Costo
 	{
 		get { return costo; }
 		set { costo = value; }
 	}
-	
-	
 }

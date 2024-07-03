@@ -3,21 +3,27 @@ using System.Collections;
 
 public class Socio : Persona
 {
-	private ArrayList deportes;
+	private ArrayList referenciasDeportes;
+	private ArrayList nombresDeDeportesAnotado;
 	private int categoria;
 	private int mesPago;
-	
-	public Socio(int edad, string nombre, int dni, ArrayList deportes, int categoria, int mesPago) : base(edad, nombre, dni)
+
+	public Socio(int edad, string nombre, int dni, ArrayList referenciasDeportes, int categoria, int mesPago, ArrayList nombresDeDeportesAnotado) : base(edad, nombre, dni)
 	{
-		this.deportes = new ArrayList();
-		this.deportes = deportes;
+		this.nombresDeDeportesAnotado = nombresDeDeportesAnotado != null ? nombresDeDeportesAnotado : new ArrayList();
+		this.referenciasDeportes = referenciasDeportes != null ? referenciasDeportes : new ArrayList();
 		this.categoria = categoria;
 		this.mesPago = mesPago;
 	}
 
-	public ArrayList Deportes
+	public ArrayList ReferenciasDeportes
 	{
-		get { return deportes; }
+		get { return referenciasDeportes; }
+	}
+
+	public ArrayList NombresDeDeportesAnotado
+	{
+		get { return nombresDeDeportesAnotado; }
 	}
 
 	public int Categoria

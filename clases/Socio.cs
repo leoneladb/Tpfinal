@@ -37,6 +37,44 @@ public class Socio : Persona
 		set { mesPago = value; }
 
 	}
+	
+	public void eliminarNombreDeporteIndex(int i){
+		nombresDeDeportesAnotado.RemoveAt(i);
+	}
+	
+	public void elimiarReferenciaDeporte(int i){
+		referenciasDeportes.RemoveAt(i);
+	}
+	
+	public int obtenerReferenciaDeporte(int i ){
+		return (int)referenciasDeportes[i];
+	}
+	
+	public string obtenerNombreDeporte(int i){
+		return (string)nombresDeDeportesAnotado[i];
+	}
+	
+	public bool esVacioReferenciaDeporte (){
+		return referenciasDeportes.Count == 0;
+	}
+	
+	public bool esVacioNombreDeportes(){
+		return nombresDeDeportesAnotado.Count == 0;
+	}
+	
+	public int totalReferenciaDeporte(){
+		return referenciasDeportes.Count;
+	}
+	public int totalNombreDeporte(){
+		return nombresDeDeportesAnotado.Count;
+	}
+	public ArrayList verReferenciaDeportes(){
+		return referenciasDeportes;
+	}
+	
+	public ArrayList verNombreDeporte(){
+		return nombresDeDeportesAnotado;
+	}
 
 	
 }

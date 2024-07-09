@@ -21,6 +21,47 @@ namespace clases{
 		{
 			get { return listDeportes; }
 		}
+		
+		public void eliminarDeporteIndex(int i){
+			ListDeportes.RemoveAt(i);
+		}
+		
+		public void eliminarSocioIndex (int i){
+			ListSocio.RemoveAt(i);
+		}
+		
+		public Deporte obtenerDeporteIndex (int i){
+			return (Deporte)ListDeportes[i];
+		}
+		
+		public Socio obtenerSocioIndex (int i){
+			return (Socio)ListSocio[i];
+		}
+		
+		public bool esVaciolistaSocio(){
+			return listSocio.Count == 0;
+		}
+		
+		public bool esVaciolistaDeporte(){
+			return listDeportes.Count == 0;
+		}
+		
+		public int totalListaDeportes(){
+			return listDeportes.Count;
+		}
+		
+		public int totallistaSocio(){
+			return listSocio.Count;
+		}
+		
+		public ArrayList verListaDeportes(){
+			return listDeportes;
+		}
+		
+		public ArrayList verListaSocio(){
+			return listSocio;
+		}
+		
 
 		public void agregarDeporte(Deporte deporte)
 		{

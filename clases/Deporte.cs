@@ -26,9 +26,9 @@ public class Deporte
 		this.id = id;
 	}
 
-	public void AgregarEntrenador(Entrenador entreador)
+	public void AgregarEntrenador(Entrenador entrenador)
 	{
-		Entrenador = entreador;
+		this.entrenador = entrenador;
 	}
 
 
